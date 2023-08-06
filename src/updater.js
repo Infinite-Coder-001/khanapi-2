@@ -97,8 +97,9 @@ function hotlist() {
           link: "https://www.khanacademy.org/profile/" + hotlist.data.listTopPrograms.programs[i].authorKaid, 
         }, 
         link: "https://www.khanacademy.org" + hotlist.data.listTopPrograms.programs[i].url, 
-        votes: String(hotlist.data.listTopPrograms.programs[i].sumVotesIncremented), 
-        forks: String(hotlist.data.listTopPrograms.programs[i].displayableSpinoffCount), 
+        thumbnail: "https://www.khanacademy.org" + hotlist.data.listTopPrograms.programs[i].imagePath, 
+        votes: hotlist.data.listTopPrograms.programs[i].sumVotesIncremented, 
+        forks: hotlist.data.listTopPrograms.programs[i].displayableSpinoffCount, 
       }); 
     }
   
@@ -154,13 +155,13 @@ function hotlist() {
         if (success) {
           console.log("Hotlist - remove - " + String(day) + "-" + String(month) + "-" + String(year) + " " + String(hours) + ":" + String(minutes)); 
         }
-        if (delay < 10) {
+        if (delay < 30) {
           clearOldHotlistLogs(delay + 1); 
         }
       }); 
     }
   
-    clearOldHotlistLogs(1); 
+    clearOldHotlistLogs(3); 
   }); 
 }
 
