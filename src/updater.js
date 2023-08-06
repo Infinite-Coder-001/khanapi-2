@@ -118,7 +118,7 @@ function hotlist() {
     }
   
     // Putting the API into a function
-    var toWrite = "var LoadHotlistAPI = function() {\n  return " +  programsString + ";\n};";
+    var toWrite = "var getHotlistData = function() {\n  return " +  programsString + ";\n};";
   
     // Commiting the file
     githubWrite("data/hotlist-" + String(year) + String(month) + String(day) + String(hours) + String(minutes) + ".js", toWrite, "Hotlist - update - " + String(day) + "-" + String(month) + "-" + String(year) + " " + String(hours) + ":" + String(minutes)); 
