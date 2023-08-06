@@ -3,6 +3,7 @@ THE API UPDATER
 ---
 An updater written in node.js. 
 Requires 'oauth-token' enviroment variable to sign in to Github. 
+Requires octokat library, line 225 in 'node_modules/octokat/dist/node/requester.js' was changed to 'return;'. 
 ---
 Hosted on Replit: https://khan-api-2.markus1234.repl.co
 Used Uptimerobot to keep alive. 
